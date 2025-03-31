@@ -9,8 +9,8 @@ const App = () => {
   };
   return (
     <div>
-      <h1>This is count</h1>
-      <h1>{count}</h1>
+      <h1 className="text-red-900 font-bold text-xl">This is count</h1>
+      <h1 className="text-red-500">{count}</h1>
       <button onClick={inCrement}>Increment</button>
     </div>
   );
