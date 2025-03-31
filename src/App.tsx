@@ -1,17 +1,26 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const App = () => {
-  const [count, setCount] = useState(1); // init state
+  const [datas, setData] = useState([]);
 
-  //function for increment state (count)
-  const inCrement = () => {
-    setCount(count + 1);
-  };
+  //we use this useEffect for fetching api or side effects
+  useEffect(() => {
+    fetch("https://jsonplaceholder.typicode.com/posts")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
   return (
     <div>
-      <h1>This is count</h1>
-      <h1>{count}</h1>
-      <button onClick={inCrement}>Increment</button>
+      <h1 className="text-red-200">Hello fetch api</h1>
+      {datas.map((res) => {
+        return (
+          <div className="bg-red-500">
+            <div>{res.userId}</div>
+            <div>{res.title}</div>
+          </div>
+        );
+      })}
     </div>
   );
 };
