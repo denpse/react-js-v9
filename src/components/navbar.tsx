@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 const Navbar = () => {
   return (
     <div>
@@ -16,18 +17,18 @@ const Navbar = () => {
                   >
                     Home
                   </a>
-                  <a
-                    href="#"
+                  <Link
+                    to="about"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     About
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="service"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   >
                     Services
-                  </a>
+                  </Link>
                   <a
                     href="#"
                     className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"

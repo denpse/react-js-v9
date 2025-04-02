@@ -1,11 +1,11 @@
-import { Link } from "react-router";
+import Card from "../components/card";
+import HeroSection from "../components/hero-section";
 
 const Home = () => {
   return (
     <div>
-      Home
-      <h1>Hello home page</h1>
-      <Link to="about">click to about</Link>
+      <HeroSection />
+      <Card />
     </div>
   );
 };
